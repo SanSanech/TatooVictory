@@ -1,0 +1,60 @@
+.gallery_swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-block {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo-block img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Кнопки навигации */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+    .photo-block img {
+        width: 80%; /* Основная фотография занимает 80% ширины */
+        margin-right: 10px; /* Отступ между фотографиями */
+    }
+    .photo-block img:not(:first-child) {
+        width: 20%; /* Остальные фотографии занимают 20% ширины */
+        opacity: 0.5; /* Полупрозрачные */
+    }
+}
+
+@media (max-width: 767px) {
+    .photo-block img {
+        width: 100%; /* На мобильных устройствах одна фотография на весь экран */
+    }
+    .photo-block img:not(:first-child) {
+        display: none; /* Скрываем остальные фотографии на мобильных устройствах */
+    }
+}

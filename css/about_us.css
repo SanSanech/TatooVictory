@@ -1,0 +1,56 @@
+.about_us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1600px;
+    text-align: center;
+}
+
+/* Стили для секции "Галерея" */
+#галерея {
+    padding: 20px;
+}
+
+#услуги {
+    padding: 20px;
+}
+
+#мастера {
+    padding: 20px;
+}
+
+#о-нас {
+    padding: 20px;
+}
+
+#главная {
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между фотографиями */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Перенос фотографий на новую строку, если не хватает места */
+}
+
+.gallery img {
+    max-width: 20%; /* Ширина изображения не более 45% от ширины контейнера */
+    height: auto;
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные эффекты */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 80%; /* На мобильных устройствах изображения занимают всю ширину */
+    }
+}
